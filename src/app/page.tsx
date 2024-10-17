@@ -1,4 +1,7 @@
+import { AnimatedTooltip, SparklesText } from '@components/aceternity'
 import { BrushStroke } from '@components/ui'
+import Image from 'next/image'
+import BaganImg from '../../public/bagan.png'
 
 // Experiences November 2022-Current Frontend Web Developer @Schooltracs Co. Ltd - Worked on redesigning and refactoring initiatives for various React web applications, enhancing user experience - Collaborated closely with designers to implement UI/UX improvements, ensuring alignment with project goals - Successfully migrated an existing student 286b-49-237-47-180.ngrok-free.app
 
@@ -35,33 +38,52 @@ const sections = [
 export default function Home() {
 	return (
 		<div>
-			<section className='mb-8'>
+			<section className='mb-12'>
+				<div className='mb-1.5'>
+					<AnimatedTooltip
+						tooltip={
+							<div className='text-white dark:text-black w-full p-2'>
+								<Image src={BaganImg} alt='Bagan, Myanmar' className='rounded-md h-28 object-cover' />
+								<p className='text-[16px] leading-5 font-normal w-full whitespace-normal mt-1.5'>
+									The phrase <strong className='font-medium'>{'Mingalarpar'}</strong> is the formal Burmese greeting, typically accompanied with a gesture wherein the palms are
+									folded together. 🙏
+								</p>
+							</div>
+						}
+					>
+						<BrushStroke>
+							<SparklesText text='Mingalarpar' />
+						</BrushStroke>
+					</AnimatedTooltip>
+					<p className='inline ml-1'>I am a tech enthusiast passionate about building practical tools that solve real-world problems.</p>
+				</div>
 				<p className='mb-1.5'>
-					<BrushStroke>Mingalarbar</BrushStroke> I am a tech enthusiast passionate about building practical tools that solve real-world problems.
+					I expertise in <b>React</b>, <b>NextJS</b>, <b>Postgres</b>, <b>MYSQL</b>, <b>NestJS</b> and <b>React Native</b>. Currently, I am deepening my knowledge in backend
+					development and system design.
 				</p>
-				<p className='mb-1.5'>I expertise in React, NextJS, Postgres, NestJS and React Native. Currently, I am deepening my knowledge in backend development and system design.</p>
-				<p className='mb-1.5'>I am also actively developing several startup initiatives.</p>
+				<p className='mb-1.5'>I am lately into swimming, working out and actively developing several startup initiatives.</p>
 			</section>
 			{sections.map(({ title, items }) => {
 				return (
-					<section key={title} className='mb-8'>
+					<section key={title} className='mb-12'>
 						<h2 className='font-medium mb-2'>{title}</h2>
-						{items.map(({ title, at, time, description }) => {
-							return (
-								<ol key={title} className='relative border-s-2 border-gray-500 pl-3'>
-									<li>
-										<div className='absolute -left-1.5 top-[7px] border-gray-500 border-[5px] h-0 w-0 rounded-full' />
+
+						<ol className='relative border-s-2 border-gray-300 dark:border-gray-600 pl-3'>
+							{items.map(({ title, at, time, description }) => {
+								return (
+									<li key={title}>
+										<div className='absolute -left-1.5 top-[7px] border-gray-300 dark:border-gray-600  border-[5px] h-0 w-0 rounded-full' />
 										<time className='text-gray-600 dark:text-gray-300 text-sm'>{time}</time>
 										<h3 className='leading-4 font-medium mt-1'>{title}</h3>
 										<a href={at.url} rel={at.title} target='_blank' className='text-blue-500 text-sm leading-3'>
 											<span className=''>@</span>
 											{at.title}
 										</a>
-										<p className='text-gray-600 dark:text-gray-300 mt-1.5 text-md whitespace-pre-line'>{description}</p>
+										<p className='text-gray-600 dark:text-gray-300 mt-2 text-md whitespace-pre-line'>{description}</p>
 									</li>
-								</ol>
-							)
-						})}
+								)
+							})}
+						</ol>
 					</section>
 				)
 			})}

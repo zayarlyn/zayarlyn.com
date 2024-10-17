@@ -26,23 +26,25 @@ export const Nav = () => {
 	const Icon = dark ? IconFlame : IconSnowflake
 
 	return (
-		<nav className='flex gap-4 tracking-wide mb-6 py-4 justify-between items-center'>
-			<div className='flex justify-between gap-4 md:justify-start'>
-				{nav_links.map(({ label, path }) => (
-					<Link href={path} key={path} className={_path === path ? 'border-b-2 border-blue-500' : ''}>
-						{label}
-					</Link>
-				))}
+		<nav className='bg-primary sticky top-0 z-10'>
+			<div className='max-w-2xl mx-auto w-11/12  flex gap-4 tracking-wide mb-6 py-2 justify-between items-center'>
+				<div className='flex justify-between gap-4 md:justify-start'>
+					{nav_links.map(({ label, path }) => (
+						<Link href={path} key={path} className={_path === path ? 'border-b-2 border-blue-500' : ''}>
+							{label}
+						</Link>
+					))}
+				</div>
+				<button
+					onClick={toggleMode}
+					className={cn(
+						'hover:shadow-md border p-1 border-slate-400 dark:border-slate-500 rounded-md  active:scale-110 duration-200',
+						dark ? 'hover:text-red-300' : 'hover:text-blue-300'
+					)}
+				>
+					<Icon className='' stroke={1.5} />
+				</button>
 			</div>
-			<button
-				onClick={toggleMode}
-				className={cn(
-					'hover:shadow-md border p-1 border-slate-400 dark:border-slate-500 rounded-md  active:scale-110 duration-200',
-					dark ? 'hover:text-red-300' : 'hover:text-blue-300'
-				)}
-			>
-				<Icon className='' stroke={1.5} />
-			</button>
 		</nav>
 	)
 }
