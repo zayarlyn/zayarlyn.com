@@ -1,5 +1,6 @@
 import { AnimatedTooltip, SparklesText } from '@components/aceternity'
-import { BrushStroke } from '@components/ui'
+import { AnimatedSection, BrushStroke } from '@components/ui'
+
 import Image from 'next/image'
 import BaganImg from '../../public/bagan.png'
 
@@ -38,7 +39,7 @@ const sections = [
 export default function Home() {
 	return (
 		<div>
-			<section className='mb-12'>
+			<AnimatedSection className='mb-12' delay={0.05}>
 				<div className='mb-1.5'>
 					<AnimatedTooltip
 						tooltip={
@@ -62,10 +63,10 @@ export default function Home() {
 					development and system design.
 				</p>
 				<p className='mb-1.5'>I am lately into swimming, working out and actively developing several startup initiatives.</p>
-			</section>
+			</AnimatedSection>
 			{sections.map(({ title, items }) => {
 				return (
-					<section key={title} className='mb-12'>
+					<AnimatedSection key={title} className='mb-12' delay={0.05}>
 						<h2 className='font-medium mb-2'>{title}</h2>
 
 						<ol className='relative border-s-2 border-gray-300 dark:border-gray-600 pl-3'>
@@ -79,12 +80,12 @@ export default function Home() {
 											<span className=''>@</span>
 											{at.title}
 										</a>
-										<p className='text-gray-600 dark:text-gray-300 mt-2 text-md whitespace-pre-line'>{description}</p>
+										<p className='text-gray-600 dark:text-gray-200 mt-2 text-md whitespace-pre-line'>{description}</p>
 									</li>
 								)
 							})}
 						</ol>
-					</section>
+					</AnimatedSection>
 				)
 			})}
 		</div>

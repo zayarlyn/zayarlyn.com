@@ -41,6 +41,7 @@ export const Nav = () => {
 						'hover:shadow-md border p-1 border-slate-400 dark:border-slate-500 rounded-md  active:scale-110 duration-200',
 						dark ? 'hover:text-red-300' : 'hover:text-blue-300'
 					)}
+					title='Toggle dark mode'
 				>
 					<Icon className='' stroke={1.5} />
 				</button>
