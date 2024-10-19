@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils'
 import { IconFlame, IconSnowflake } from '@tabler/icons-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const nav_links = [
 	{ label: 'Lore', path: '/' },
@@ -13,21 +13,28 @@ const nav_links = [
 ]
 
 export const Nav = () => {
-	const [dark, setDark] = useState(true)
+	const [dark, setDark] = useState(false)
 	const _path = usePathname()
+
+	useEffect(() => {
+		if (typeof window !== undefined && localStorage.getItem('mode') === 'dark') {
+			document.documentElement.classList.add('dark')
+			setDark(true)
+		}
+	}, [])
 
 	const toggleMode = () => {
 		setDark((isDark) => {
 			document.documentElement.classList[isDark ? 'remove' : 'add']('dark')
-			// localStorage[isDark ? 'removeItem' : 'setItem']('mode', 'dark')
+			localStorage[isDark ? 'removeItem' : 'setItem']('mode', 'dark')
 			return !isDark
 		})
 	}
 	const Icon = dark ? IconFlame : IconSnowflake
 
 	return (
-		<nav className='bg-primary sticky top-0 z-10'>
-			<div className='max-w-2xl mx-auto w-11/12  flex gap-4 tracking-wide mb-6 py-2 justify-between items-center'>
+		<div className='bg-primary sticky top-0 z-10 px-1'>
+			<nav className='max-w-2xl mx-auto w-11/12  flex gap-4 tracking-wide mb-6 py-3 justify-between items-center'>
 				<div className='flex justify-between gap-4 md:justify-start'>
 					{nav_links.map(({ label, path }) => (
 						<Link href={path} key={path} className={_path === path ? 'border-b-2 border-blue-500' : ''}>
@@ -45,7 +52,7 @@ export const Nav = () => {
 				>
 					<Icon className='' stroke={1.5} />
 				</button>
-			</div>
-		</nav>
+			</nav>
+		</div>
 	)
 }

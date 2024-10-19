@@ -6,14 +6,16 @@ import type { Metadata } from 'next'
 import { Rubik } from 'next/font/google'
 import './globals.css'
 
+const title = 'Zayar Lin | The Honored One'
+
 export const metadata: Metadata = {
-	title: 'Zayar Lin | SWE',
+	title,
 	description: 'A programmer with latent potential',
 	openGraph: {
-		title: 'Zayar Lin | SWE',
+		title,
 		description: 'A programmer with latent potential',
 		// description: 'Through heaven and earth, I alone am the honored one',
-		siteName: 'Zayar Lin | SWE',
+		siteName: title,
 		// images: ['/favicon.svg'],
 	},
 }
@@ -28,14 +30,14 @@ export default function RootLayout({
 	const shouldInjectToolbar = process.env.NODE_ENV === 'development'
 
 	return (
-		<html lang='en' className='dark'>
+		<html lang='en' className=''>
 			<body className={`${rubik.className} antialiased dark:text-white text-black`}>
 				<BackgroundBeamsWithCollision className='-z-10 fixed top-0 left-0 h-screen md:h-screen' />
-				<section className='max-w-2xl mx-auto w-11/12 pt-8' tabIndex={-1}>
+				<section className='max-w-2xl mx-auto w-11/12 px-1 pt-8' tabIndex={-1}>
 					<Heading />
 				</section>
 				<Nav />
-				<main className='max-w-2xl mx-auto w-11/12 pb-8'>{children}</main>
+				<main className='max-w-2xl mx-auto w-11/12 pb-8  px-1'>{children}</main>
 				<Analytics />
 				{shouldInjectToolbar && <VercelToolbar />}
 			</body>
