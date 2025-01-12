@@ -11,9 +11,15 @@ const sections = [
 		title: 'Experiences 🧏🏻‍♂️',
 		items: [
 			{
+				title: 'Analyst Programmer',
+				at: { title: 'Schooltracs Co. Ltd', url: 'https://www.schooltracs.com' },
+				time: '2024 November - current',
+				// description: `-`,
+			},
+			{
 				title: 'Frontend Web Developer',
 				at: { title: 'Schooltracs Co. Ltd', url: 'https://www.schooltracs.com' },
-				time: '2022 November - current',
+				time: '2022 November - 2024 November',
 				description: `- Worked on redesigning and refactoring several React web applications, improving the user experience
 - Collaborated with designers to implement UI/UX updates, ensuring consistency with project goals
 - Migrated a student mobile app to an Expo-managed codebase, contributing to the launch of a new mobile app for teachers
@@ -56,13 +62,13 @@ export default function Home() {
 							<SparklesText text='Mingalarpar' />
 						</BrushStroke>
 					</AnimatedTooltip>
-					<p className='inline ml-1'>I am a tech enthusiast passionate about building practical tools that solve real-world problems.</p>
+					<p className='inline ml-1'>I am a blockchain enthusiast passionate to build practical tools that solve real-world challenges.</p>
 				</div>
 				<p className='mb-1.5'>
-					I expertise in <b>React</b>, <b>NextJS</b>, <b>Postgres</b>, <b>MYSQL</b>, <b>NestJS</b> and <b>React Native</b>. Currently, I am deepening my knowledge in backend
-					development and system design.
+					I expertise in <b>React</b>, <b>NextJS</b>, <b>Postgres</b>, <b>MYSQL</b>, <b>NestJS</b>, <b>Laravel</b> and <b>React Native (Expo)</b>. Currently, I am deepening my
+					knowledge in backend development and system design.
 				</p>
-				<p className='mb-1.5'>I am lately into swimming, working out and actively developing several startup initiatives.</p>
+				{/* <p className='mb-1.5'>I like swimming, sightseeing and doing hackathons.</p> */}
 			</AnimatedSection>
 			{sections.map(({ title, items }) => {
 				return (
@@ -72,8 +78,8 @@ export default function Home() {
 						<ol className='relative border-s-2 border-gray-300 dark:border-gray-600 pl-3'>
 							{items.map(({ title, at, time, description }) => {
 								return (
-									<li key={title}>
-										<div className='absolute -left-1.5 top-[7px] border-gray-300 dark:border-gray-600  border-[5px] h-0 w-0 rounded-full' />
+									<li key={title} className='mb-5 relative'>
+										<div className='absolute -left-[1.1rem] top-[7px] border-gray-300 dark:border-gray-600  border-[5px] h-0 w-0 rounded-full' />
 										<time className='text-gray-600 dark:text-gray-300 text-sm'>{time}</time>
 										<h3 className='leading-4 font-medium mt-1'>{title}</h3>
 										<a href={at.url} rel={at.title} target='_blank' className='text-blue-500 text-sm leading-3'>

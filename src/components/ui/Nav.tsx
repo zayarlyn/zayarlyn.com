@@ -13,24 +13,24 @@ const nav_links = [
 ]
 
 export const Nav = () => {
-	const [dark, setDark] = useState(false)
+	const [darkMode, setDarkMode] = useState(false)
 	const _path = usePathname()
 
 	useEffect(() => {
 		if (typeof window !== undefined && localStorage.getItem('mode') === 'dark') {
 			document.documentElement.classList.add('dark')
-			setDark(true)
+			setDarkMode(true)
 		}
 	}, [])
 
 	const toggleMode = () => {
-		setDark((isDark) => {
+		setDarkMode((isDark) => {
 			document.documentElement.classList[isDark ? 'remove' : 'add']('dark')
 			localStorage[isDark ? 'removeItem' : 'setItem']('mode', 'dark')
 			return !isDark
 		})
 	}
-	const Icon = dark ? IconFlame : IconSnowflake
+	const Icon = darkMode ? IconFlame : IconSnowflake
 
 	return (
 		<div className='bg-primary sticky top-0 z-10 px-1'>
@@ -46,7 +46,7 @@ export const Nav = () => {
 					onClick={toggleMode}
 					className={cn(
 						'hover:shadow-md border p-1 border-slate-400 dark:border-slate-500 rounded-md  active:scale-110 duration-200',
-						dark ? 'hover:text-red-300' : 'hover:text-blue-300'
+						darkMode ? 'hover:text-red-300' : 'hover:text-blue-300'
 					)}
 					title='Toggle dark mode'
 				>
