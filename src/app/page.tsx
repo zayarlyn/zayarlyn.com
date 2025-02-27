@@ -62,7 +62,7 @@ export default function Home() {
 							<SparklesText text='Mingalarpar' />
 						</BrushStroke>
 					</AnimatedTooltip>
-					<p className='inline ml-1'>I am a blockchain enthusiast passionate to build practical tools that solve real-world challenges.</p>
+					<p className='inline ml-1'>I am a adaptive programmer passionate to build practical tools that solve real-world challenges.</p>
 				</div>
 				<p className='mb-1.5'>
 					I expertise in <b>React</b>, <b>NextJS</b>, <b>Postgres</b>, <b>MYSQL</b>, <b>NestJS</b>, <b>Laravel</b> and <b>React Native (Expo)</b>. Currently, I am deepening my
