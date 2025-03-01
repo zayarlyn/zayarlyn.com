@@ -1,14 +1,31 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-@layer components {
-	.bg-primary {
-		@apply bg-gradient-to-b from-white to-neutral-100 dark:from-neutral-950 dark:to-neutral-800;
-	}
-	.bg-primary-reverse {
-		@apply bg-gradient-to-b dark:from-white dark:to-neutral-100 from-neutral-950 to-neutral-800;
-	}
+@custom-variant dark (&:is(.dark *));
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+@utility bg-primary {
+  @apply bg-linear-to-b from-white to-neutral-100 dark:from-neutral-950 dark:to-neutral-800;
+}
+
+@utility bg-primary-reverse {
+  @apply bg-linear-to-b dark:from-white dark:to-neutral-100 from-neutral-950 to-neutral-800;
 }
 
 b {
