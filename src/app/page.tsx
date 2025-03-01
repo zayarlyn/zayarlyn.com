@@ -33,10 +33,14 @@ const sections = [
 		title: 'Education 🎓',
 		items: [
 			{
-				title: 'Electronic and Communication Engineering',
+				title: 'Electronic and Communication Engineering, B.E. (Hons.)',
 				at: { title: 'Myanmar Institute of Information Technology', url: 'https://miit.edu.mm/' },
-				time: '2019 December - 2020 May',
-				description: 'Learned the fundamental of programming, algorithms and problem solving using C programming language',
+				time: (
+					<span>
+						2019 December - 2020 May <span className='ml-1 text-red-400'>(Discontinued)</span>
+					</span>
+				),
+				description: 'Learned the history of computing, fundamental of programming, algorithms and problem solving tactics using C programming language',
 			},
 		],
 	},
@@ -45,13 +49,13 @@ const sections = [
 export default function Home() {
 	return (
 		<div>
-			<AnimatedSection className='mb-12' delay={0.05}>
+			<AnimatedSection className='mb-10' delay={0.05}>
 				<div className='mb-1.5'>
 					<AnimatedTooltip
 						tooltip={
-							<div className='text-white dark:text-black w-full p-2'>
+							<div className='text-white dark:text-black w-full p-2 '>
 								<Image src={BaganImg} alt='Bagan, Myanmar' className='rounded-md h-28 object-cover' />
-								<p className='text-[16px] leading-5 font-normal w-full whitespace-normal mt-1.5'>
+								<p className='text-[16px] leading-5 font-normal w-full whitespace-normal mt-1.5 '>
 									The phrase <strong className='font-medium'>{'Mingalarpar'}</strong> is the formal <strong className='font-medium'>Myanmar</strong> greeting, typically accompanied
 									with a gesture wherein the palms are folded together. 🙏
 								</p>
@@ -72,7 +76,7 @@ export default function Home() {
 			</AnimatedSection>
 			{sections.map(({ title, items }) => {
 				return (
-					<AnimatedSection key={title} className='mb-12' delay={0.05}>
+					<AnimatedSection key={title} className='mb-10' delay={0.05}>
 						<h2 className='font-medium mb-2'>{title}</h2>
 
 						<ol className='relative border-s-2 border-gray-300 dark:border-gray-600 pl-3'>
