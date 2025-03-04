@@ -2,7 +2,7 @@ import { AnimatedTooltip, SparklesText } from '@components/aceternity'
 import { AnimatedSection, BrushStroke } from '@components/ui'
 
 import Image from 'next/image'
-import BaganImg from '../../public/bagan.png'
+import BaganImg from '../../../public/bagan.png'
 
 // Experiences November 2022-Current Frontend Web Developer @Schooltracs Co. Ltd - Worked on redesigning and refactoring initiatives for various React web applications, enhancing user experience - Collaborated closely with designers to implement UI/UX improvements, ensuring alignment with project goals - Successfully migrated an existing student 286b-49-237-47-180.ngrok-free.app
 
