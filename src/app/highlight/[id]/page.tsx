@@ -11,7 +11,7 @@ const page = async ({ params }: { params: Promise<{ [key: string]: string }> }) 
 	if (!highlight) return <div>not found</div>
 
 	return (
-		<AnimatedSection className='mt-4 '>
+		<AnimatedSection className='mt-4'>
 			<section className='mb-4'>
 				{highlight.media.map((media) => (
 					<div key={media.uri} className='rounded-md overflow-hidden'>
@@ -20,7 +20,7 @@ const page = async ({ params }: { params: Promise<{ [key: string]: string }> }) 
 				))}
 			</section>
 			<h1 className='text-xl font-medium c-primary'>{highlight.title}</h1>
-			<p className='mt-1'>{highlight.content}</p>
+			<p className='mt-1 c-secondary'>{highlight.content}</p>
 		</AnimatedSection>
 	)
 }
