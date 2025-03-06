@@ -2,7 +2,7 @@
 import { motion, useInView } from 'framer-motion'
 import { ReactNode, useRef } from 'react'
 
-export const AnimatedSection = ({ children, delay, ...rest }: { children: ReactNode; delay: number; className: string }) => {
+export const AnimatedSection = ({ children, delay = 0.05, ...rest }: { children: ReactNode; delay?: number; className: string }) => {
 	const ref = useRef(null)
 	const isInView = useInView(ref, { once: true })
 

@@ -32,7 +32,7 @@ const page = () => {
 									</div>
 								)}
 								<div className='flex flex-col'>
-									<a href={link} target='_blank' rel={title} key={id} className='group flex text-md gap-1'>
+									<a href={link} target='_blank' rel={title} key={id} className='group flex text-md gap-1 c-primary'>
 										<h2 className='font-medium leading-4 mb-1 group-hover:underline decoration-blue-500 underline-offset-2'>{title}</h2>
 										<IconLink size={18} />
 									</a>

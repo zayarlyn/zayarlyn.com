@@ -33,6 +33,19 @@ body {
 	@apply bg-linear-to-b dark:from-white dark:to-neutral-100 from-neutral-950 to-neutral-800;
 }
 
+@utility c-primary {
+	@apply text-black dark:text-white;
+}
+@utility c-secondary {
+	@apply text-gray-600 dark:text-gray-300;
+}
+@utility c-blue {
+	@apply text-blue-400;
+}
+@utility c-red {
+	@apply text-red-400;
+}
+
 b {
 	font-weight: 500;
 }
@@ -43,5 +56,5 @@ b {
 	--text-md: 16px;
 	--text-lg: 18px;
 	--text-xl: 20px;
-	--text-primary: ;
+	/* --text-primary: ; */
 }

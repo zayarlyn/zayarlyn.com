@@ -25,7 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
 	return (
 		<html lang='en' className=''>
-			<body className={`${rubik.className} antialiased dark:text-white text-black`}>{children}</body>
+			<body className={`${rubik.className} antialiased`}>{children}</body>
 			<Analytics />
 			{shouldInjectToolbar && <VercelToolbar />}
 		</html>
