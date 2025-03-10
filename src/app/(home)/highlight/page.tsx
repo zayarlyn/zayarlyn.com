@@ -1,18 +1,23 @@
-import { highlights } from '@/highlights.db'
+import { config } from '@/config'
 import { AnimatedSection } from '@components/ui'
 import { IconCalendarEvent, IconMapPin } from '@tabler/icons-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const page = () => {
+const page = async () => {
+	const raw = await fetch(`${config().wewrite['api-url']}/api/posts?tags=highlight`, { next: { revalidate: 60 * 1000 } })
+	const data = await raw.json()
+	// console.log(data)
+
 	return (
 		<div>
-			{highlights.map(({ id, title, media, content, date, location }) => {
+			{/* @ts-ignore */}
+			{data?.map(({ _id: id, title, resources, content, location, firstPublishedAt }) => {
 				return (
 					<AnimatedSection className='mb-12' delay={0.05} key={id}>
 						<Link href={'/highlight/' + id} rel={title} key={id} className='group relative flex gap-3'>
 							<div className='shrink-0'>
-								<Image src={media[0].uri} alt={title} width={5712} height={4284} className='aspect-square w-24 object-cover rounded-md border' />
+								<Image src={resources[0].url} alt={title} width={5712} height={4284} className='aspect-square w-24 object-cover rounded-md border' />
 							</div>
 							<div className='flex flex-col'>
 								<h2 className='font-medium leading-4 mb-1.5 group-hover:underline decoration-blue-500 underline-offset-2 c-primary'>{title}</h2>
@@ -20,7 +25,7 @@ const page = () => {
 								<div className='flex gap-2'>
 									<div className='flex  gap-1 c-secondary'>
 										<IconCalendarEvent size={16} className='mt-[1px]' />
-										<span className='text-sm font-medium'>{date}</span>
+										<span className='text-sm font-medium'>{new Date(firstPublishedAt).toDateString()}</span>
 									</div>
 									{location && (
 										<div className='flex gap-1 c-secondary'>
