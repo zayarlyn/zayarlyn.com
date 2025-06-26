@@ -35,12 +35,9 @@ const sections = [
 			{
 				title: 'Electronic and Communication Engineering, B.E. (Hons.)',
 				at: { title: 'Myanmar Institute of Information Technology', url: 'https://miit.edu.mm/' },
-				time: (
-					<span>
-						2019 December - 2020 May <span className='ml-1 c-red'>(Discontinued)</span>
-					</span>
-				),
-				description: 'Learned the history of computing, fundamental of programming, algorithms and problem solving tactics using C programming language',
+				time: <span>2019 December - 2020 May</span>,
+				description:
+					'Learned the history of computing, fundamental of programming, algorithms and problem solving tactics using C programming language',
 			},
 		],
 	},
@@ -56,8 +53,9 @@ export default function Home() {
 							<div className='text-white dark:text-black w-full p-2 '>
 								<Image src={BaganImg} alt='Bagan, Myanmar' className='rounded-md h-28 object-cover' />
 								<p className='text-[16px] leading-5 font-normal w-full whitespace-normal mt-1.5 '>
-									The phrase <strong className='font-medium'>{'Mingalarpar'}</strong> is the formal <strong className='font-medium'>Myanmar</strong> greeting, typically accompanied
-									with a gesture wherein the palms are folded together. 🙏
+									The phrase <strong className='font-medium'>{'Mingalarpar'}</strong> is the formal{' '}
+									<strong className='font-medium'>Myanmar</strong> greeting, typically accompanied with a gesture
+									wherein the palms are folded together. 🙏
 								</p>
 							</div>
 						}
@@ -66,10 +64,13 @@ export default function Home() {
 							<SparklesText text='Mingalarpar' />
 						</BrushStroke>
 					</AnimatedTooltip>
-					<p className='mb-1.5 inline ml-1 c-primary'>I am a adaptive programmer passionate to build practical tools that solve real-world challenges.</p>
+					<p className='mb-1.5 inline ml-1 c-primary'>
+						{/* I am a programmer on a voyage of building practical tools targeting real-world use cases. */}
+						As a programmer, I’m on a voyage to develop tools with real-world impact.
+					</p>
 					<p className='mb-1.5 c-primary'>
-						I expertise in <b>React</b>, <b>NextJS</b>, <b>Postgres</b>, <b>MYSQL</b>, <b>NestJS</b>, <b>Laravel</b> and <b>React Native (Expo)</b>. Currently, I am deepening my
-						knowledge in backend development and system design.
+						I expertise in <b>React</b>, <b>React Native (Expo)</b>, <b>NextJS</b>, <b>Fastify</b>, <b>Laravel</b> and{' '}
+						<b>GraphQL</b> and actively expanding my scope into backend development and system design.
 					</p>
 				</div>
 
