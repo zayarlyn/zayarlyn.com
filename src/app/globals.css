@@ -40,7 +40,7 @@ body {
 	@apply text-gray-600 dark:text-gray-300;
 }
 @utility c-blue {
-	@apply text-blue-400;
+	@apply text-blue-500;
 }
 @utility c-red {
 	@apply text-red-400;
