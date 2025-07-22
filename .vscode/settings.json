@@ -1,0 +1,9 @@
+{
+	"files.exclude": {
+		// "**/Thumbs.db": true
+		"**/.next": true,
+		"**/.vercel": true,
+		"**/node_modules": true,
+		"**/next-env.d.ts": true
+	}
+}

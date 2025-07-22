@@ -1,37 +1,13 @@
+import { db } from '@/db/db'
+import { projectTable } from '@/db/schema'
 import { AnimatedSection } from '@components/ui'
 import { IconLink } from '@tabler/icons-react'
+import { desc } from 'drizzle-orm'
 import Image from 'next/image'
 
-const projects = [
-	{
-		id: 0,
-		title: 'QR Dine',
-		content: `Restaurant QR menu and ordering system`,
-
-		thumbnail:
-			'https://raw.githubusercontent.com/zayarlyn/qrdine/8cdb3b7511b7fba0b69decb3edeccef2d8aa0ed1/doc/logo.svg',
-		// date: '2024 Nov 23',
-		// location: 'Bangkok',
-		link: 'https://github.com/zayarlyn/qrdine',
-		tech_stack: ['Fastify', 'Postgres', 'Docker', 'React (NextJS)', 'GraphQL'],
-	},
-	{
-		id: 1,
-		title: 'Myanmar Unicode Keyboard',
-		content: `Online keyboard for Myanmar Unicode layout
-    - bind to physical keyboard/touch
-    - easy key mappings`,
-
-		thumbnail: '/img/111.png',
-		// date: '2024 Nov 23',
-		// location: 'Bangkok',
-		link: 'https://zayarlyn.github.io/Unicode-Myanmar-Keyboard/',
-		tech_stack: ['Javascript', 'CSS', 'HTML'],
-	},
-]
-
-const page = () => {
+const Page = async () => {
 	// return <div>Coming Soon....</div>
+	const projects = await db.select().from(projectTable).orderBy(desc(projectTable.id))
 
 	return (
 		<div>
@@ -62,7 +38,7 @@ const page = () => {
 										{content}
 									</p>
 									<div className='flex gap-2 text-sm font-medium text-gray-600  dark:text-gray-300 mt-auto'>
-										{tech_stack.join(', ')}
+										{tech_stack}
 										{/* <div className='flex  gap-1'>
 											<IconCalendarEvent size={16} className='mt-[1px]' />
 											<span className='text-sm font-medium text-gray-600  dark:text-gray-300'>{date}</span>
@@ -83,4 +59,4 @@ const page = () => {
 	// return <div>Coming Soon....</div>
 }
 
-export default page
+export default Page
