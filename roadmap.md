@@ -3,8 +3,8 @@
 ### blog
 
 - add copy button
-- open links in new tab
+- [x] open links in new tab
 
-- ~~sticky nav var~~
-- metadata & opengraph
-- migrate to namecheap
+- [x] ~~sticky nav var~~
+- [x] metadata & opengraph
+- [x] migrate to namecheap

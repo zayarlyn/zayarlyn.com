@@ -1,5 +1,5 @@
-import { BackgroundBeamsWithCollision } from '@components/aceternity'
-import { Heading, Nav } from '@components/ui'
+import { BackgroundBeamsWithCollision } from '@me/comp/aceternity'
+import { Heading, Nav } from '@me/comp/core'
 import '../globals.css'
 
 export default function RootLayout({
