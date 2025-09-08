@@ -48,7 +48,7 @@ body {
 }
 
 @utility container-main {
-	@apply max-w-3xl mx-auto w-11/12 px-4!;
+	@apply max-w-3xl mx-auto w-[86%] px-2! sm:px-4!;
 }
 
 b {

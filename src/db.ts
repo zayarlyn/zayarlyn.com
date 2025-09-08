@@ -98,7 +98,7 @@ const socials = [
 
 export const db = {
 	name: 'Zayar Lin',
-	role: 'Software Engineer and a returning CS student',
+	role: 'Software Engineer',
 	location: 'Bangkok, Thailand',
 	bio: 'As a programmer, I am on a voyage to develop tools with real-world impact.<br /> I expertise in <b>React</b>, <b>React Native (Expo)</b>, <b>NextJS</b>, <b>NestJS</b> and <b>GraphQL</b> and actively expanding my scope into backend development and system design. <br />',
 	experiences,

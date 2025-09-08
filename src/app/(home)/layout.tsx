@@ -13,9 +13,8 @@ export default function RootLayout({
 			<Heading />
 			<Nav />
 			<main className='container-main pb-8 px-1'>{children}</main>
-			<footer className='border-y-[1.4px]  fixed bottom-0  w-full bg-primary'>
-				<div className='container-main flex justify-between border-x-[1.5px] py-1.5'>
-					<span>hello@zayarlyn.com</span>
+			<footer className='border-y-[1.4px] fixed bottom-0  w-full bg-primary'>
+				<div className='container-main text-center border-x-[1.5px] py-2.5'>
 					<span>© {new Date().getFullYear()} Zayar Lin. All rights reserved.</span>
 				</div>
 			</footer>

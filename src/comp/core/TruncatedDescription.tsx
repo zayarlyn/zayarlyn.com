@@ -11,7 +11,7 @@ export const TruncatedDescription = ({ text = '', showCount = 3 }: { text: strin
 	return (
 		<div ref={parent}>
 			{items.slice(0, showAll ? undefined : showCount).map((txt) => (
-				<p key={txt} className='mt-.5 whitespace-pre-line c-secondary'>
+				<p key={txt} className='mt-.5 whitespace-pre-line c-secondary text-[15px]'>
 					{items.length === 1 ? '' : '-'} {txt}
 				</p>
 			))}
