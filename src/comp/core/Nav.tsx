@@ -34,7 +34,7 @@ export const Nav = () => {
 
 	return (
 		<div className='bg-primary sticky top-0 z-10 border-y mb-6'>
-			<nav className='container-main flex gap-4 tracking-wide justify-between items-center border-x-[1.5px]'>
+			<nav className='container-main flex gap-4 tracking-wide justify-between items-center sm:border-x-[1.5px]'>
 				<div className='flex justify-between gap-4 md:justify-start c-primary'>
 					{nav_links.map(({ label, path }) => (
 						<Link href={path} key={path} className={cn('leading-10', _path === path ? 'border-b-2 border-blue-500' : '')}>

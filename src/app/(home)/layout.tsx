@@ -14,11 +14,11 @@ export default function RootLayout({
 			<Nav />
 			<main className='container-main pb-8 px-1'>{children}</main>
 			<footer className='border-y-[1.4px] fixed bottom-0  w-full bg-primary'>
-				<div className='container-main text-center border-x-[1.5px] py-2.5'>
+				<div className='container-main text-center sm:border-x-[1.5px] py-2'>
 					<span>© {new Date().getFullYear()} Zayar Lin. All rights reserved.</span>
 				</div>
 			</footer>
-			<div className='container-main fixed h-full top-0 left-1/2 -translate-x-1/2 border-x-[1.5px] -z-10' />
+			<div className='hidden sm:block container-main fixed h-full top-0 left-1/2 -translate-x-1/2 border-x-[1.5px] -z-10' />
 		</>
 	)
 }
