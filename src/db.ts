@@ -1,8 +1,10 @@
-export const experiences = [
+const experiences = [
 	{
 		title: 'Analyst Programmer',
 		at: { title: 'Schooltracs Co. Ltd (Singapore)', url: 'https://www.linkedin.com/company/schooltracs-ltd' },
 		time: '2024 Nov - 2025 Jun',
+		summary:
+			'Developed backend features in Laravel, maintained automated tests, resolved issues across platforms, and delivered UX improvements while collaborating on scheduling, notifications, and reporting.',
 		description: `-x- Designed and built backend features using Laravel and different tools, such as configurable lesson schedules, leave rules, package fee logic, and journal exports for schools.
         -x- Provided bi-weekly on-call support to troubleshoot and resolve live production issues.
         -x- Maintained automated tests (Playwright) and ensured data consistency across modules.
@@ -14,8 +16,10 @@ export const experiences = [
 		title: 'Frontend Web Developer',
 		at: { title: 'Schooltracs Co. Ltd (Singapore)', url: 'https://www.linkedin.com/company/schooltracs-ltd' },
 		time: '2022 Nov - 2024 Nov',
+		summary:
+			'Redesigned and refactored React apps to improve UX, collaborated on UI/UX updates, and migrated a student app to Expo while helping launch a new teacher app. Implemented a Stripe/Xero checkout system, built features across Laravel + GraphQL backends and frontends, and rebuilt the company website with Hugo and TailwindCSS for better usability.',
 		description: `-x- Worked on redesigning and refactoring several React web applications, improving the user experience.
--x- Collaborated with designers to implement UI/UX updates, ensuring consistency with project goals.
+-x- Collaborated with designers to implement UI/UX updates, ensuring alignment with project goals.
 -x- Migrated a student mobile app to an Expo-managed codebase, contributing to the launch of a new mobile app for teachers.
 -x- Implemented an online checkout system with Stripe and Xero, improving overall payment experience.
 -x- Developed features for the frontend while implementing backend functionality using Laravel and GraphQL.
@@ -23,12 +27,12 @@ export const experiences = [
 	},
 ]
 
-export const educations = [
+const educations = [
 	{
 		title: 'Computer Science (B.Sc.)',
 		at: { title: "King Mongkut's University of Technology Thonburi", url: 'https://www.kmutt.ac.th/en' },
 		time: '<span>2025 Aug - 2029 July</span>',
-		// description:
+		description: 'Java, OOP, Calculus, Discrete Mathematics',
 		// 'Learned the history of computing, fundamental of programming, algorithms and problem solving tactics using C programming language',
 	},
 	{
@@ -39,7 +43,7 @@ export const educations = [
 	},
 ]
 
-export const projects = [
+const projects = [
 	{
 		id: 0,
 		title: 'QR Dine',
@@ -66,7 +70,7 @@ export const projects = [
 	},
 ]
 
-export const highlights = [
+const highlights = [
 	{
 		id: 'aws-community-day-myanmar-2024',
 		title: 'AWS Community Day Myanmar 2024',
@@ -79,3 +83,27 @@ export const highlights = [
 		link: 'https://www.linkedin.com/posts/kaungthant1083_awsugmm-awscommunity-awsusergroupmeetup-activity-7202878134067630080-ztQt',
 	},
 ]
+
+const socials = [
+	{ type: 'email', title: 'Email', link: 'mailto:hello@zayarlyn.com', ariaLabel: "View Zayar Lin's Twitter" },
+	{ type: 'github', title: 'Github', link: 'https://github.com/zayarlyn', ariaLabel: "View Zayar Lin's Github" },
+	{
+		type: 'linkedin',
+		title: 'Linkedin',
+		link: 'https://linkedin.com/in/zayarlyn',
+		ariaLabel: "View Zayar Lin's Linkedin",
+	},
+	// { icon: IconBrandX, title: 'Twitter', link: 'https://twitter.com/zayarlyn', ariaLabel: "View Zayar Lin's Twitter" },
+]
+
+export const db = {
+	name: 'Zayar Lin',
+	role: 'Software Engineer and a returning CS student',
+	location: 'Bangkok, Thailand',
+	bio: 'As a programmer, I am on a voyage to develop tools with real-world impact.<br /> I expertise in <b>React</b>, <b>React Native (Expo)</b>, <b>NextJS</b>, <b>NestJS</b> and <b>GraphQL</b> and actively expanding my scope into backend development and system design. <br />',
+	experiences,
+	educations,
+	projects,
+	highlights,
+	socials,
+}

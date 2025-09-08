@@ -1,5 +1,5 @@
-import { highlights } from '@me/db'
 import { AnimatedSection } from '@me/comp/core'
+import { db } from '@me/db'
 import Image from 'next/image'
 
 const page = async ({ params }: { params: Promise<{ [key: string]: string }> }) => {
@@ -9,7 +9,7 @@ const page = async ({ params }: { params: Promise<{ [key: string]: string }> }) 
 	// const data = await raw.json()
 
 	console.log(postId)
-	const highlight = highlights.find((h) => h.id === postId)
+	const highlight = db.highlights.find((h) => h.id === postId)
 
 	// if (!data) return <div>not found</div>
 

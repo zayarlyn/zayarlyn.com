@@ -1,5 +1,5 @@
 import { AnimatedSection } from '@me/comp/core'
-import { projects } from '@me/db'
+import { db } from '@me/db'
 import { IconLink } from '@tabler/icons-react'
 import Image from 'next/image'
 
@@ -8,7 +8,7 @@ const page = () => {
 	return (
 		<div>
 			<div>
-				{projects.map(({ id, link, title, thumbnail, content, tech_stack }) => {
+				{db.projects.map(({ id, link, title, thumbnail, content, tech_stack }) => {
 					return (
 						<AnimatedSection key={id} className='mb-12' delay={0.05}>
 							<div className='flex gap-3'>

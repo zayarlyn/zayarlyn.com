@@ -17,9 +17,9 @@ export const Mingalarbar = () => {
 					</div>
 					<p className='text-[16px] leading-5 font-normal w-full whitespace-normal mt-1.5 '>
 						The phrase <b>"{'Mingalarpar'}"</b> is a common <b>Myanmar</b> greeting term, typically followed by the gesture "🙏". <br />
-						<p className='mt-1'>
+						<span className='mt-1'>
 							Say <b>"Mingalarpar"</b> today and claim a smile from a Burmese. 😉
-						</p>
+						</span>
 					</p>
 				</div>
 			}

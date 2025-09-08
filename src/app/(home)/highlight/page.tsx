@@ -1,5 +1,5 @@
-import { highlights } from '@me/db'
 import { AnimatedSection } from '@me/comp/core'
+import { db } from '@me/db'
 import { IconCalendarEvent, IconMapPin } from '@tabler/icons-react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -11,16 +11,16 @@ const page = async () => {
 
 	return (
 		<div>
-			{/* @ts-ignore */}
-			{highlights?.map(({ id, title, media, content, location, timestamp }) => {
+			{db.highlights.map(({ id, title, media, content, location, timestamp }) => {
 				return (
 					<AnimatedSection className='mb-12' delay={0.05} key={id}>
-						<Link href={'/highlight/' + id} rel={title} key={id} className='group relative flex gap-3'>
+						{/* <Link href={'/highlight/' + id} rel={title} key={id} className='group relative flex gap-3'> */}
+						<div key={id} className='group relative flex gap-3'>
 							<div className='shrink-0'>
 								<Image src={media[0].uri} alt={title} width={5712} height={4284} className='aspect-square w-24 object-cover rounded-md border' />
 							</div>
 							<div className='flex flex-col'>
-								<h2 className='font-medium leading-4 mb-1.5 group-hover:underline decoration-blue-500 underline-offset-2 c-primary'>{title}</h2>
+								<h2 className='font-medium leading-4 mb-1.5 c-primary'>{title}</h2>
 								<p className='text-smd line-clamp-4 mb-1 c-secondary'>{content}</p>
 								<div className='flex gap-2'>
 									<div className='flex  gap-1 c-secondary'>
@@ -35,7 +35,7 @@ const page = async () => {
 									)}
 								</div>
 							</div>
-						</Link>
+						</div>
 					</AnimatedSection>
 				)
 			})}

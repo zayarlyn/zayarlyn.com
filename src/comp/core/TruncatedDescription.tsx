@@ -11,15 +11,12 @@ export const TruncatedDescription = ({ text = '', showCount = 3 }: { text: strin
 	return (
 		<div ref={parent}>
 			{items.slice(0, showAll ? undefined : showCount).map((txt) => (
-				<p key={txt} className='mt-1.5 text-[15px] whitespace-pre-line c-secondary'>
-					- {txt}
+				<p key={txt} className='mt-.5 whitespace-pre-line c-secondary'>
+					{items.length === 1 ? '' : '-'} {txt}
 				</p>
 			))}
 			{items.length > showCount && (
-				<button
-					onClick={() => setShowAll((p) => !p)}
-					className='cursor-pointer text-sm underline font-medium whitespace-nowrap'
-				>
+				<button onClick={() => setShowAll((p) => !p)} className='cursor-pointer text-sm underline font-medium whitespace-nowrap'>
 					{showAll ? 'Read less' : 'Read more'}
 				</button>
 			)}
