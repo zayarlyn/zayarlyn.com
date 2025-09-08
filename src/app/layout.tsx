@@ -1,7 +1,7 @@
 import { Analytics } from '@vercel/analytics/react'
 import { VercelToolbar } from '@vercel/toolbar/next'
 import type { Metadata } from 'next'
-import { Rubik } from 'next/font/google'
+import { Rubik, Poppins } from 'next/font/google'
 // import { loadEnvConfig } from '@next/env'
 import './globals.css'
 

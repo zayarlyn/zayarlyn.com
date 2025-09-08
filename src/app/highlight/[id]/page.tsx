@@ -1,5 +1,5 @@
-import { highlights } from '@/highlights.db'
-import { AnimatedSection } from '@components/ui'
+import { highlights } from '@me/db'
+import { AnimatedSection } from '@me/comp/core'
 import Image from 'next/image'
 
 const page = async ({ params }: { params: Promise<{ [key: string]: string }> }) => {

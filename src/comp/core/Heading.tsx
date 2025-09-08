@@ -1,6 +1,7 @@
-import { IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react'
+import { IconBrandGithub, IconBrandLinkedin, IconMail } from '@tabler/icons-react'
 
 const social_links = [
+	{ icon: IconMail, title: 'Email', link: 'mailto:hello@zayarlyn.com', ariaLabel: "View Zayar Lin's Twitter" },
 	{ icon: IconBrandGithub, title: 'Github', link: 'https://github.com/zayarlyn', ariaLabel: "View Zayar Lin's Github" },
 	{
 		icon: IconBrandLinkedin,

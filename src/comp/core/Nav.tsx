@@ -1,5 +1,5 @@
 'use client'
-import { cn } from '@/lib/utils'
+import { cn } from '@me/lib/utils'
 import { IconFlame, IconSnowflake } from '@tabler/icons-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
