@@ -33,16 +33,16 @@ export const Nav = () => {
 	const Icon = darkMode ? IconFlame : IconSnowflake
 
 	return (
-		<div className='bg-primary sticky top-0 z-10 px-1'>
-			<nav className='max-w-2xl mx-auto w-11/12  flex gap-4 tracking-wide mb-6 py-3 justify-between items-center'>
+		<div className='bg-primary sticky top-0 z-10 border-y mb-6'>
+			<nav className='container-main flex gap-4 tracking-wide justify-between items-center border-x-[1.5px]'>
 				<div className='flex justify-between gap-4 md:justify-start c-primary'>
 					{nav_links.map(({ label, path }) => (
-						<Link href={path} key={path} className={_path === path ? 'border-b-2 border-blue-500' : ''}>
+						<Link href={path} key={path} className={cn('leading-9', _path === path ? 'border-b-2 border-blue-500' : '')}>
 							{label}
 						</Link>
 					))}
 				</div>
-				<button
+				{/* <button
 					onClick={toggleMode}
 					className={cn(
 						'hover:shadow-md border p-1 border-slate-400 dark:border-slate-500 rounded-md active:scale-110 duration-200 c-primary cursor-pointer',
@@ -50,8 +50,8 @@ export const Nav = () => {
 					)}
 					title='Toggle dark mode'
 				>
-					<Icon className='' stroke={1.5} />
-				</button>
+					<Icon className='' size={20} stroke={1.5} />
+				</button> */}
 			</nav>
 		</div>
 	)

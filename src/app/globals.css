@@ -26,7 +26,8 @@ body {
 }
 
 @utility bg-primary {
-	@apply bg-linear-to-b from-white to-neutral-100 dark:from-neutral-950 dark:to-neutral-800;
+	/* @apply bg-linear-to-b from-white to-neutral-100 dark:from-neutral-950 dark:to-neutral-800; */
+	@apply bg-white;
 }
 
 @utility bg-primary-reverse {
@@ -44,6 +45,10 @@ body {
 }
 @utility c-red {
 	@apply text-red-400;
+}
+
+@utility container-main {
+	@apply max-w-3xl mx-auto w-11/12 px-4!;
 }
 
 b {

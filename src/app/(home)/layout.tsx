@@ -10,11 +10,16 @@ export default function RootLayout({
 	return (
 		<>
 			<BackgroundBeamsWithCollision className='-z-10 fixed top-0 left-0 h-screen md:h-screen' />
-			<section className='max-w-2xl mx-auto w-11/12 px-1 pt-8' tabIndex={-1}>
-				<Heading />
-			</section>
+			<Heading />
 			<Nav />
-			<main className='max-w-2xl mx-auto w-11/12 pb-8 px-1'>{children}</main>
+			<main className='container-main pb-8 px-1'>{children}</main>
+			<footer className='border-y-[1.4px]  fixed bottom-0  w-full bg-primary'>
+				<div className='container-main flex justify-between border-x-[1.5px] py-1.5'>
+					<span>hello@zayarlyn.com</span>
+					<span>© {new Date().getFullYear()} Zayar Lin. All rights reserved.</span>
+				</div>
+			</footer>
+			<div className='container-main fixed h-full top-0 left-1/2 -translate-x-1/2 border-x-[1.5px] -z-10' />
 		</>
 	)
 }
