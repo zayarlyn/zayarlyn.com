@@ -6,16 +6,30 @@ import { Rubik, Poppins } from 'next/font/google'
 import './globals.css'
 
 const title = 'Zayar Lin | The Honored One'
+const description = 'A programmer with latent potential'
+
+const baseUrl = 'https://zayarlyn.com'
+const ogUrl = '/og.png'
 
 export const metadata: Metadata = {
 	title,
 	description: 'A programmer with latent potential',
+
 	openGraph: {
 		title,
-		description: 'A programmer with latent potential',
-		// description: 'Through heaven and earth, I alone am the honored one',
-		siteName: title,
-		// images: ['/favicon.svg'],
+		description,
+		url: baseUrl,
+		images: [
+			{
+				url: ogUrl,
+				secureUrl: ogUrl,
+				width: 1200,
+				height: 630,
+				alt: "Open Graph image for Zayar Lin's personal website",
+			},
+		],
+		type: 'website',
+		siteName: "Zayar Lin's personal website",
 	},
 }
 
