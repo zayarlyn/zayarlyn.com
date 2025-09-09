@@ -3,6 +3,19 @@ body {
 	height: 100%;
 }
 
+html {
+	scrollbar-gutter: stable;
+}
+
+/* Chrome/Edge/Safari */
+::-webkit-scrollbar {
+	width: 8px;
+}
+::-webkit-scrollbar-thumb {
+	background: rgba(0, 0, 0, 0.4);
+	border-radius: 4px;
+}
+
 @import 'tailwindcss';
 
 @custom-variant dark (&:is(.dark *));
@@ -49,6 +62,10 @@ body {
 
 @utility container-main {
 	@apply max-w-3xl mx-auto w-11/12 sm:px-4!;
+}
+
+@utility horiz-line {
+	@apply border-t-[1.5px] w-full h-[1px];
 }
 
 b {

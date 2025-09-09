@@ -12,7 +12,7 @@ export default function RootLayout({
 			<BackgroundBeamsWithCollision className='-z-10 fixed top-0 left-0 h-screen md:h-screen' />
 			<Heading />
 			<Nav />
-			<main className='container-main pb-8 px-1'>{children}</main>
+			<main className='pb-8 px-1'>{children}</main>
 			<footer className='border-y-[1.4px] fixed bottom-0  w-full bg-primary'>
 				<div className='container-main text-center sm:border-x-[1.5px] py-2'>
 					<span>© {new Date().getFullYear()} Zayar Lin. All rights reserved.</span>
